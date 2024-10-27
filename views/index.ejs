@@ -1,1 +1,19 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="/css/style.css">
+    <title>All Blogs</title>
+</head>
+<body>
+    <h1>All Blogs</h1>
+    <a href="/blogs/new">Create New Blog</a>
+    <ul>
+        <% blogs.forEach(function(blog){ %>
+            <li>
+                <a href="/blogs/<%= blog._id %>"><%= blog.title %></a>
+            </li>
+        <% }); %>
+    </ul>
+</body>
+</html>
 
